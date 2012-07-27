@@ -169,7 +169,7 @@ class MainForm(object):
         self.pauseButton = self.wTree.get_widget("pauseButton")
         self.favButton = self.wTree.get_widget("favButton")
         self.skipButton = self.wTree.get_widget("skipButton")
-        self.exitButton = self.wTree.get_widget("exitButton")
+        #self.exitButton = self.wTree.get_widget("exitButton")
         
         self.photo = self.wTree.get_widget("photo")
         self.photo.set_from_file(BASEDIR+"/DBfm.png")
