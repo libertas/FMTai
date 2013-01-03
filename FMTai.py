@@ -1,4 +1,4 @@
-#! /usr/bin/env python2
+#! /usr/bin/env python
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation; either version 2 of the License, or
@@ -38,7 +38,10 @@ import os
 
 import libdbfm
 
-BASEDIR = os.path.dirname(os.path.realpath(__file__))
+#BASEDIR = os.path.dirname(os.path.realpath(__file__))
+BASEDIR=os.path.expanduser("~")
+
+os.system("cp ./config.ini ~/.fmtai_config.ini")
 
 class DBfm(object):
     '''
@@ -59,7 +62,7 @@ class DBfm(object):
 
     def loadConfig(self):
         try:
-            self.config.read(BASEDIR+'/config.ini')
+            self.config.read(BASEDIR+'/.fmtai_config.ini')
             self.fm.loadConfig(self.config)
             return True
         except ConfigParser.NoSectionError,ConfigParser.NoOptionError:
@@ -73,7 +76,7 @@ class DBfm(object):
 
     def saveConfig(self):
         self.fm.saveConfig(self.config)
-        self.config.write(open(BASEDIR+'/config.ini','w'))
+        self.config.write(open(BASEDIR+'/.fmtai_config.ini','w'))
 
     def login(self,name,pwd):
         print 'Logining...'
@@ -86,7 +89,7 @@ class DBfm(object):
     def __del__(self):
         print 'logout'
         del self.fm
-        os.remove(BASEDIR+'/config.ini')
+        os.remove(BASEDIR+'/.fmtai_config.ini')
     
     def played(self):
         self.fm.played_song(self.cur.props['sid'], self.cur.props['aid'])
@@ -147,7 +150,7 @@ class MainForm(object):
         self.dbfm = DBfm()
 
         #setup UI
-        self.gladefile = BASEDIR+"/FMTai.glade"
+        self.gladefile = "./FMTai.glade"
         self.wTree = gtk.glade.XML(self.gladefile,"mainWindow")
 
         dic = { "on_mainWindow_destroy_event" : self.destroy,
@@ -301,8 +304,8 @@ class MainForm(object):
         #self.playProcess.set_fraction(0.0)
         #self.timer = gobject.timeout_add (self.dbfm.get_detail('length'), self.progress_timeout, self.playProcess)
         self.systray.set_tooltip(self.songDetail.get_text())
-        urllib.urlretrieve(self.dbfm.get_detail('picture'),BASEDIR+"/picture.jpg")
-        self.photo.set_from_file(BASEDIR+'/picture.jpg')
+        urllib.urlretrieve(self.dbfm.get_detail('picture'),BASEDIR+"/.fmtai_picture.jpg")
+        self.photo.set_from_file(BASEDIR+'/.fmtai_picture.jpg')
         if self.dbfm.isfav():
             self.favButton.set_active(True)
         else:

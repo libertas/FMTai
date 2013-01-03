@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 # -*- coding: UTF8 -*-
 # Copyright (C) 2008-2011 Sun Ning <classicning@gmail.com>
 #
