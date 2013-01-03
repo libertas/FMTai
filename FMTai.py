@@ -175,7 +175,7 @@ class MainForm(object):
         #self.exitButton = self.wTree.get_widget("exitButton")
         
         self.photo = self.wTree.get_widget("photo")
-        self.photo.set_from_file(BASEDIR+"/radio.png")
+        self.photo.set_from_file("/opt/fmtai/radio.png")
 
         self.songDetail = self.wTree.get_widget("songDetail")
         #self.playProcess = self.wTree.get_widget('playProcess')
@@ -248,7 +248,7 @@ class MainForm(object):
     def logoutButton_clicked(self,widget):
         print 'logout'
         self.player.set_state(gst.STATE_NULL)
-        self.photo.set_from_file(BASEDIR+"/radio.png")
+        self.photo.set_from_file("/opt/fmtai/radio.png")
         self.channelList.set_active(-1)
         self.songDetail.set_text("songDetail")
         self.loginWindowButton.set_sensitive(True)
@@ -328,7 +328,7 @@ class MainForm(object):
 
     def setupSystray(self):
         self.systray = gtk.StatusIcon()
-        self.systray.set_from_file(BASEDIR+'/radio.png')
+        self.systray.set_from_file('/opt/fmtai/radio.png')
 
         self.systray.connect("activate", self.show_hide_window)
         self.systray.connect('popup-menu', self.systrayPopup)
