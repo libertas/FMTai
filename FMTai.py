@@ -361,7 +361,6 @@ class MainForm(object):
         chs_i=sorted(chs.iteritems(), key = lambda asd:asd[1] ,reverse = False)
         for ch in chs_i:
             list.insert(ch[1],[ch[0]])
-            print ch
             
         self.channelList.set_model(list)
         cell = gtk.CellRendererText()
