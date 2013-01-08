@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: UTF8 -*-
 # Copyright (C) 2008-2011 Sun Ning <classicning@gmail.com>
 #
@@ -98,6 +97,7 @@ class DoubanFM(object):
         self.channels = {}
         for channel in channels['channels']:
             self.channels[channel['name_en']] = channel['channel_id']
+            
     
     def get_channel(self):
         """ current channel """
