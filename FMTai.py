@@ -332,7 +332,7 @@ class MainForm(object):
 
         self.systray.connect("activate", self.show_hide_window)
         self.systray.connect('popup-menu', self.systrayPopup)
-        self.systray.set_tooltip('Pydoubanfm')
+        self.systray.set_tooltip('FMTai')
         self.systray.set_visible(True)
     
     def show_hide_window(self, widget):
