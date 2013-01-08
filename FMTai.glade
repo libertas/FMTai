@@ -90,7 +90,7 @@
         <child>
           <widget class="GtkToggleButton" id="pauseButton">
             <property name="label" translatable="yes">Pause/Resume</property>
-            <property name="width_request">107</property>
+            <property name="width_request">120</property>
             <property name="height_request">58</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -145,16 +145,16 @@
           </packing>
         </child>
         <child>
-			<widget class="GtkButton" id="exitButton">
-				<property name="label" translatable="yes">EXIT</property>
-				<signal name="clicked" handler="on_exitButton_clicked"/>
-				<property name="width_request">60</property>
-				<property name="height_request">40</property>
-				<property name="visible">True</property>
-				<property name="can_focus">True</property>
-				<property name="receives_default">True</property>
-				<signal name="clicked" handler="on_exitButton_clicked"/>
-			</widget>
+          <widget class="GtkButton" id="exitButton">
+            <property name="label" translatable="yes">EXIT</property>
+            <property name="width_request">60</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_exitButton_clicked"/>
+            <signal name="clicked" handler="on_exitButton_clicked"/>
+          </widget>
           <packing>
             <property name="x">373</property>
             <property name="y">150</property>
