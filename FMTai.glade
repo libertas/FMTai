@@ -3,7 +3,7 @@
   <!-- interface-requires gtk+ 2.16 -->
   <!-- interface-naming-policy project-wide -->
   <widget class="GtkWindow" id="mainWindow">
-    <property name="width_request">440</property>
+    <property name="width_request">450</property>
     <property name="height_request">190</property>
     <property name="title" translatable="yes">DoubanFM</property>
     <property name="resizable">False</property>
@@ -57,7 +57,7 @@
             <property name="selectable">True</property>
           </widget>
           <packing>
-            <property name="x">115</property>
+            <property name="x">120</property>
             <property name="y">7</property>
           </packing>
         </child>
