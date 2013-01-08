@@ -357,7 +357,9 @@ class MainForm(object):
     def prepare_channelList(self):
         list = gtk.ListStore(gobject.TYPE_STRING)
         chs = self.dbfm.get_channels()
-        for ch in chs.items():
+        
+        chs_i=sorted(chs.iteritems(), key = lambda asd:asd[1] ,reverse = False)
+        for ch in chs_i:
             list.insert(ch[1],[ch[0]])
             
         self.channelList.set_model(list)
