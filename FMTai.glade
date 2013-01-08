@@ -25,24 +25,8 @@
             <signal name="clicked" handler="on_skipButton_clicked"/>
           </widget>
           <packing>
-            <property name="x">150</property>
-            <property name="y">140</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="GtkButton" id="loginWindowButton">
-            <property name="label" translatable="yes">Login</property>
-            <property name="width_request">60</property>
-            <property name="height_request">30</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
-            <signal name="clicked" handler="on_loginWindowButton_clicked" object="loginWindow"/>
-          </widget>
-          <packing>
-            <property name="x">3</property>
-            <property name="y">65</property>
+            <property name="x">10</property>
+            <property name="y">100</property>
           </packing>
         </child>
         <child>
@@ -73,7 +57,7 @@
           </widget>
           <packing>
             <property name="x">10</property>
-            <property name="y">140</property>
+            <property name="y">60</property>
           </packing>
         </child>
         <child>
@@ -101,21 +85,6 @@
           </widget>
         </child>
         <child>
-          <widget class="GtkToggleButton" id="favButton">
-            <property name="label" translatable="yes">Fav</property>
-            <property name="width_request">60</property>
-            <property name="height_request">40</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <signal name="toggled" handler="on_favButton_toggled"/>
-          </widget>
-          <packing>
-            <property name="x">80</property>
-            <property name="y">140</property>
-          </packing>
-        </child>
-        <child>
           <widget class="GtkComboBox" id="channelList">
             <property name="width_request">140</property>
             <property name="height_request">29</property>
@@ -123,41 +92,24 @@
             <signal name="changed" handler="on_channelList_changed"/>
           </widget>
           <packing>
-            <property name="x">220</property>
+            <property name="x">100</property>
             <property name="y">150</property>
           </packing>
         </child>
         <child>
-          <widget class="GtkButton" id="logoutButton">
-            <property name="label" translatable="yes">Logout</property>
+          <widget class="GtkButton" id="exitButton">
+            <property name="label" translatable="yes">EXIT</property>
             <property name="width_request">60</property>
-            <property name="height_request">30</property>
+            <property name="height_request">40</property>
             <property name="visible">True</property>
-            <property name="sensitive">False</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
-            <signal name="clicked" handler="on_logoutButton_clicked"/>
+            <signal name="clicked" handler="on_exitButton_clicked"/>
+            <signal name="clicked" handler="on_exitButton_clicked"/>
           </widget>
           <packing>
-            <property name="x">3</property>
-            <property name="y">100</property>
-          </packing>
-        </child>
-        <child>
-			<widget class="GtkButton" id="exitButton">
-				<property name="label" translatable="yes">EXIT</property>
-				<signal name="clicked" handler="on_exitButton_clicked"/>
-				<property name="width_request">60</property>
-				<property name="height_request">40</property>
-				<property name="visible">True</property>
-				<property name="can_focus">True</property>
-				<property name="receives_default">True</property>
-				<signal name="clicked" handler="on_exitButton_clicked"/>
-			</widget>
-          <packing>
-            <property name="x">373</property>
-            <property name="y">150</property>
+            <property name="x">10</property>
+            <property name="y">140</property>
           </packing>
         </child>
       </widget>

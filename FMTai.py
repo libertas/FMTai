@@ -189,8 +189,8 @@ class MainForm(object):
         self.setupSystray()
         
         if self.dbfm.loadConfig():
-            self.loginWindowButton.set_sensitive(False)
-            self.logoutButton.set_sensitive(True)
+            #self.loginWindowButton.set_sensitive(False)
+            #self.logoutButton.set_sensitive(True)
             self.prepare_channelList()
             self.channelList.set_active(self.dbfm.get_channel())
             self.play()
@@ -306,10 +306,10 @@ class MainForm(object):
         self.systray.set_tooltip(self.songDetail.get_text())
         urllib.urlretrieve(self.dbfm.get_detail('picture'),BASEDIR+"/.fmtai_picture.jpg")
         self.photo.set_from_file(BASEDIR+'/.fmtai_picture.jpg')
-        if self.dbfm.isfav():
-            self.favButton.set_active(True)
-        else:
-            self.favButton.set_active(False)
+        #if self.dbfm.isfav():
+        #    self.favButton.set_active(True)
+        #else:
+        #    self.favButton.set_active(False)
         
     def play(self):
         self.player.set_state(gst.STATE_PLAYING)
