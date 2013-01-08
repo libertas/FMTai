@@ -16,9 +16,15 @@
  * 
  */
 
+Please install this program with following commands:
+	#./install
+	
 USEAGE:
-	python2 FMTai.py
+	%fmtai
 
 This program is made to help people with Douban FM.It was first wrote by 
 Sun Ning <classicning@gmail.com>,and it was modified and given a new name 
 by Libertas Vei <horizonvei@gmail.com> to make this program more useful.
+
+Copyright © 2011-2012 Sun Ning
+Copyright © 2012-2013 Libertas Vei
